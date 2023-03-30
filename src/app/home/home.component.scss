@@ -1,0 +1,38 @@
+/* ----------------------------------------------------------------
+HOME STYLE
+---------------------------------------------------------------- */
+
+$divider-color: #9c9c9c;
+
+.title {
+    font-size: 45pt;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 20pt;
+    text-align: start;
+}
+
+.row-line {
+    display: flex;
+    justify-content: start;
+    margin: 20px 0;
+}
+
+.row-entity {
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.row-entity-2 {
+    display: inline-flex;
+    margin-inline: 100px;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}

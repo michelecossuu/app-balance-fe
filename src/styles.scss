@@ -5,7 +5,27 @@ GLOBAL STYLE
 $background-theme-dark: #222222;
 $text-color-light: #fff;
 
+$margin-container-200: 200px;
+
 body {
     background-color: $background-theme-dark;
     color: $text-color-light;
+    font-family: 'Domine';
+}
+
+.container {
+    margin: $margin-container-200;
+}
+
+.align-text-center {
+    text-align: center;
+}
+
+.align-item-center {
+    align-self: center;
+}
+
+@font-face {
+    font-family: 'Domine';
+    src: url('./assets/fonts/domine/static/Domine-Regular.ttf') format('truetype');
 }
