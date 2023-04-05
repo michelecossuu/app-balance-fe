@@ -16,9 +16,10 @@ $divider-color: #9c9c9c;
 
 .row-line {
     display: flex;
-    justify-content: start;
-    margin: 20px 0;
+    justify-content: space-between;
+    
 }
+
 
 .row-entity {
     display: flex;
@@ -35,4 +36,5 @@ $divider-color: #9c9c9c;
     height: 30px;
     width: 30px;
     margin-right: 10px;
+    margin-left: 10px;
 }
