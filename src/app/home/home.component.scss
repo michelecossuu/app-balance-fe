@@ -2,8 +2,6 @@
 HOME STYLE
 ---------------------------------------------------------------- */
 
-$divider-color: #9c9c9c;
-
 .title {
     font-size: 45pt;
     margin-bottom: 20px;
@@ -17,9 +15,7 @@ $divider-color: #9c9c9c;
 .row-line {
     display: flex;
     justify-content: space-between;
-    
 }
-
 
 .row-entity {
     display: flex;
@@ -27,6 +23,7 @@ $divider-color: #9c9c9c;
     margin: 0 30px;
 }
 
+/** serve per allineare l'icona al nome */
 .row-entity-2 {
     display: inline-flex;
     margin-inline: 100px;

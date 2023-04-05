@@ -4,6 +4,7 @@ GLOBAL STYLE
 
 $background-theme-dark: #222222;
 $text-color-light: #fff;
+$divider-color: #9c9c9c;
 
 $margin-container-200: 200px;
 
@@ -25,6 +26,14 @@ body {
 
 .align-item-center {
     align-self: center;
+}
+
+.divider {
+    width: 80%; 
+    height: 2px; 
+    background-color: $divider-color; 
+    margin: 0 auto; 
+    margin-bottom: 10px;
 }
 
 @font-face {
