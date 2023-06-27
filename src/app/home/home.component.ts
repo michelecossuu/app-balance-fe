@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as labels from '../../assets/labels/labels.json';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   title = 'balance-app-fe';
+  labels = labels;
 }

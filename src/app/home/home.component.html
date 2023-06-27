@@ -1,6 +1,6 @@
 <div class="container align-text-center">
 
-    <p class="title">BALANCE APP</p>
+    <p class="title">{{ labels.appTitle }}</p>
 
     <div class="divider"></div>
 
@@ -8,11 +8,11 @@
 
         <div class="row-entity row-entity-2">
             <img class="icon" src="assets/icons/money-bag.png" alt="Bank Account Icon">
-            <p [routerLink]="['/bankAccounts']">BANK ACCOUNT</p>
+            <p [routerLink]="['/bankAccounts']">{{ labels.home.bankAccount }}</p>
         </div>
 
         <div class="row-entity row-entity-2">
-            <p>MY ACCOUNT</p>
+            <p>{{ labels.home.myAccount }}</p>
             <img class="icon" src="assets/icons/user.png" alt="User Icon">
         </div>
 
@@ -22,11 +22,11 @@
 
         <div class="row-entity row-entity-2">
             <img class="icon" src="assets/icons/menu.png" alt="Categories Icon">
-            <p>CATEGORIES</p>
+            <p>{{ labels.home.categories }}</p>
         </div>
 
         <div class="row-entity row-entity-2">
-            <p>SETTINGS</p>
+            <p>{{ labels.home.settings }}</p>
             <img class="icon" src="assets/icons/settings.png" alt="Settings Icon">
         </div>
 
@@ -36,7 +36,7 @@
 
         <div class="row-entity row-entity-2">
             <img class="icon" src="assets/icons/bar-chart.png" alt="Transactions Icon">
-            <p>TRANSACTIONS</p>
+            <p>{{ labels.home.transactions }}</p>
         </div>
 
     </div>
