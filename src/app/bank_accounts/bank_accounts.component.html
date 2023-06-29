@@ -1,1 +1,30 @@
-<h2 class="title">BALANCE APP</h2>
+<div class="container">
+
+    <p class="title">{{ labels.bankAccounts.title }}</p>
+
+    <!-- div con il totale -->
+
+    <div class="total_div align-text-center">
+
+        <p class="total_size">Totale:</p>
+        <p class="balance_size">{{ totalBalance }}€</p>
+
+    </div>
+
+    <!-- div con i conti -->
+
+    <div class="bank_accounts_div">
+        <div *ngFor="let account of bankAccounts" class="bank_account_div">
+
+            <div class="account_name">
+                <p class="bank_account_text">{{ account.name }}</p>
+            </div>
+
+            <div class="account_balance">
+                <p class="bank_account_balance">{{ account.balance }}€</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>

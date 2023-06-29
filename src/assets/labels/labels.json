@@ -1,10 +1,14 @@
 {
     "appTitle": "BALANCE APP",
     "home": {
-        "bankAccount": "BANK ACCOUNT",
-        "myAccount": "MY ACCOUNT",
-        "categories": "CATEGORIES",
-        "settings": "SETTINGS",
-        "transactions": "TRANSACTIONS"
+      "bankAccount": "BANK ACCOUNT",
+      "myAccount": "MY ACCOUNT",
+      "categories": "CATEGORIES",
+      "settings": "SETTINGS",
+      "transactions": "TRANSACTIONS"
+    },
+    "bankAccounts": {
+      "title": "BANK ACCOUNTS"
     }
+    
   }

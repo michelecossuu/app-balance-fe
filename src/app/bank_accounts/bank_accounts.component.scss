@@ -1,0 +1,61 @@
+/* ----------------------------------------------------------------
+BANK ACCOUNTS STYLE
+---------------------------------------------------------------- */
+
+$background-theme-gray: #808080;
+
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.title {
+    font-size: 25pt;
+    margin-bottom: 20px;
+}
+
+.total_div {
+    width: 290px;
+    height: auto;
+    background-color: $background-theme-gray; 
+    padding: 1px;
+    border-radius: 5%;
+}
+
+.total_size {
+    font-size: 15pt;
+}
+
+.balance_size {
+    font-size: 20pt;
+}
+
+.bank_accounts_div {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+}
+
+.bank_account_div {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center; /* Allinea verticalmente i contenuti al centro */
+}
+ 
+.account_name {
+    flex: 20; /* Occupa lo spazio disponibile rimanente */
+}
+ 
+.bank_account_text {
+    font-size: 20pt;
+    font-weight: bold;
+}
+ 
+.account_balance {
+    flex: 80; /* Allinea il testo al centro orizzontalmente */
+}
+ 
+.bank_account_balance {
+    font-size: 20pt;
+}
