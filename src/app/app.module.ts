@@ -8,6 +8,7 @@ import { BankAccountsComponent } from './bank_accounts/bank_accounts.component';
 import { BankAccountComponent } from './bank_accounts/bank_account/bank_account.component';
 
 import { AppRoutes } from './app.routes';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRoutes } from './app.routes';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(AppRoutes)
+    RouterModule.forRoot(AppRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
