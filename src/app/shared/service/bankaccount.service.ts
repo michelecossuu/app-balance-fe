@@ -8,14 +8,20 @@ type EntityResponseTypeBankAccounts = HttpResponse<ApiResponseBankAccounts>;
 
 @Injectable({ providedIn: 'root' })
 export class BankAccountService {
-  public resourceUrl =  SERVER_API_URL + 'bankAccounts/all';
+  public resourceUrl =  SERVER_API_URL + 'bankAccounts';
 
   constructor(protected http: HttpClient) {}
 
   getBankAccounts(): Observable<EntityResponseTypeBankAccounts> {
-    return this.http.get<ApiResponseBankAccounts>(`${this.resourceUrl}`, {
+    return this.http.get<ApiResponseBankAccounts>(`${this.resourceUrl}/all`, {
       observe: 'response',
     });
+  }
+
+  saveBankAccount(bankAccount: string): Observable<EntityResponseTypeBankAccounts> {
+    return this.http.post<any>(`${this.resourceUrl}/newBankAccount`, 
+      { "name": bankAccount }, 
+      { observe: 'response' });
   }
 
 }

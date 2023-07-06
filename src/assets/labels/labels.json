@@ -8,7 +8,15 @@
       "transactions": "TRANSACTIONS"
     },
     "bankAccounts": {
-      "title": "BANK ACCOUNTS"
+      "title": "BANK ACCOUNTS",
+      "total": "Total:",
+      "addBankAccount": "+",
+      "dialog" : {
+        "title": "Add new Bank Account",
+        "name": "Name:",
+        "confirm": "Confirm",
+        "cancel": "Cancel"
+      }
     }
     
   }

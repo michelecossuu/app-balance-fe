@@ -73,3 +73,14 @@ $background-theme-yellow: #FDDA0D;
     border-right: $background-theme-yellow;
     border-bottom: $background-theme-yellow;
 }
+
+
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Imposta il colore dello sfondo con un'opacità del 60% */
+    z-index: 999; /* Assicurati che l'overlay sia sopra gli altri elementi */
+  }

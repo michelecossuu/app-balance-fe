@@ -1,0 +1,46 @@
+
+/* ----------------------------------------------------------------
+ADD BANK ACCOUNT DIALOG STYLE
+---------------------------------------------------------------- */
+
+$background-theme-gray: #808080;
+$background-theme-yellow: #FDDA0D;
+
+.dialog-container {
+    background-color: $background-theme-gray;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 3%;
+}
+
+.title {
+    font-size: 25pt;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 370px;
+    height: 30px;
+}
+
+.buttons_container {
+    display: flex;
+    justify-content: space-between; /* Allinea i bottoni ai due estremi */
+    align-items: center; /* Allinea verticalmente i bottoni al centro */
+    margin-top: 16px; /* Aggiungi margine superiore per separare dalla sezione precedente della dialog */
+}
+
+.button {
+    height: 40px;
+    width: 80px;
+    border-radius: 20%;
+    background-color: $background-theme-yellow;
+    font-size: medium;
+    border-color: white;
+    border-right: $background-theme-yellow;
+    border-bottom: $background-theme-yellow;
+}
+  

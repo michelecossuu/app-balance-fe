@@ -1,0 +1,12 @@
+<div class="dialog-container">
+    
+    <p class="title">{{ labels.bankAccounts.dialog.title }}</p>
+    <p>{{ labels.bankAccounts.dialog.name }}</p>
+    <input class="input" type="text" [(ngModel)]="newBankAccountName" (ngModelChange)="validateInput()">
+
+    <div class="buttons_container">
+        <button class="button" (click)="confirm()">{{ labels.bankAccounts.dialog.confirm }}</button>
+        <button class="button" (click)="cancel()">{{ labels.bankAccounts.dialog.cancel }}</button>
+    </div>
+
+</div>

@@ -9,18 +9,22 @@ import { BankAccountComponent } from './bank_accounts/bank_account/bank_account.
 
 import { AppRoutes } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
+import { BankAccountDialogComponent } from './bank_accounts/bank-account-dialog/bank-account-dialog.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BankAccountsComponent,
-    BankAccountComponent
+    BankAccountComponent,
+    BankAccountDialogComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(AppRoutes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

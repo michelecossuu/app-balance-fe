@@ -3,17 +3,24 @@
     <div style="display: flex;">
 
         <p class="title">{{ labels.bankAccounts.title }}</p>
-        <button class="add_bank_account">+</button>
+        
+        <!-- dialog aggiunta bank account -->
+        <button class="add_bank_account" (click)="openBankAccountDialog()">{{ labels.bankAccounts.addBankAccount }}</button>
+        <div class="dialog-overlay" *ngIf="isDialogOpen">
+            <app-bank-account-dialog
+                *ngIf="isDialogOpen"
+                (confirmClicked)="onSaveBankAccount($event)"
+                (cancelClicked)="onCancelBankAccount()"
+            ></app-bank-account-dialog>
+        </div>
 
     </div>
     
-    
-
     <!-- div con il totale -->
 
     <div class="total_div align-text-center">
 
-        <p class="total_size">Totale:</p>
+        <p class="total_size">{{ labels.bankAccounts.total }}</p>
         <p class="balance_size">{{ totalBalance }}€</p>
 
     </div>
