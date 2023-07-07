@@ -4,6 +4,7 @@ BANK ACCOUNTS STYLE
 
 $background-theme-gray: #808080;
 $background-theme-yellow: #FDDA0D;
+$background-theme-red: #D2042D;
 
 .container {
     margin-left: 20px;
@@ -54,11 +55,15 @@ $background-theme-yellow: #FDDA0D;
 }
  
 .account_balance {
-    flex: 80; /* Allinea il testo al centro orizzontalmente */
+    flex: 10; /* Allinea il testo al centro orizzontalmente */
 }
  
 .bank_account_balance {
     font-size: 20pt;
+}
+
+.delete_account {
+    flex: 70;
 }
 
 .add_bank_account {
@@ -74,6 +79,16 @@ $background-theme-yellow: #FDDA0D;
     border-bottom: $background-theme-yellow;
 }
 
+.delete_bank_account {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: $background-theme-red;
+    font-size: large;
+    border-color: black;
+    border-right: $background-theme-red;
+    border-bottom: $background-theme-red;
+}
 
 .dialog-overlay {
     position: fixed;

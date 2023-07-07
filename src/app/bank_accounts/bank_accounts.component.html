@@ -6,9 +6,9 @@
         
         <!-- dialog aggiunta bank account -->
         <button class="add_bank_account" (click)="openBankAccountDialog()">{{ labels.bankAccounts.addBankAccount }}</button>
-        <div class="dialog-overlay" *ngIf="isDialogOpen">
+        <div class="dialog-overlay" *ngIf="isAddDialogOpen">
             <app-bank-account-dialog
-                *ngIf="isDialogOpen"
+                *ngIf="isAddDialogOpen"
                 (confirmClicked)="onSaveBankAccount($event)"
                 (cancelClicked)="onCancelBankAccount()"
             ></app-bank-account-dialog>
@@ -36,6 +36,17 @@
 
             <div class="account_balance">
                 <p class="bank_account_balance">{{ account.balance }}€</p>
+            </div>
+
+            <div class="delete_account">
+                <button class="delete_bank_account" (click)="openConfirmDialog(account)">{{ labels.bankAccounts.deleteBankAccount }}</button>
+                <div class="dialog-overlay" *ngIf="isConfirmDialogOpen">
+                    <app-confirm-dialog
+                        *ngIf="isConfirmDialogOpen"
+                        (confirmClicked)="onDeleteBankAccount()"
+                        (cancelClicked)="onCancelDelete()"
+                    ></app-confirm-dialog>
+                </div>
             </div>
 
         </div>

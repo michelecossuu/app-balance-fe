@@ -12,8 +12,10 @@ import { BankAccountService } from '../shared/service/bankaccount.service';
 })
 export class BankAccountsComponent {
   labels = labels;
-  isDialogOpen: boolean = false;
+  isAddDialogOpen: boolean = false;
+  isConfirmDialogOpen: boolean = false;
   bankAccounts: IBankAccount[] = [];
+  toDeleteBankAccount: IBankAccount | undefined;
   totalBalance: number = 0;
 
   constructor(
@@ -43,19 +45,43 @@ export class BankAccountsComponent {
    * Aprire Dialog per aggiungere un Bank Account
    */
   openBankAccountDialog(): void {
-    this.isDialogOpen = true;
+    this.isAddDialogOpen = true;
   }
 
   onSaveBankAccount(newBankAccountName: string): void {
     console.log('onSaveBankAccount - Testo inserito:', newBankAccountName);
-    this.isDialogOpen = false;
+    this.isAddDialogOpen = false;
     this.saveBankAccount(newBankAccountName);
   }
 
   onCancelBankAccount(): void {
-    this.isDialogOpen = false;
+    this.isAddDialogOpen = false;
+  }
 
-    // Altre azioni da eseguire dopo l'annullamento
+  /**
+   * Aprire dialog per conferma dell'eliminazione del bank account
+   */
+  openConfirmDialog(bankAccount: IBankAccount): void {
+    this.isConfirmDialogOpen = true;
+    this.toDeleteBankAccount = bankAccount;
+  }
+
+  onDeleteBankAccount(): void {
+    console.log('onDeleteBankAccount - Elimino bank account: ', this.toDeleteBankAccount);
+    if(this.toDeleteBankAccount) {
+      if(this.toDeleteBankAccount.id) {
+        this.deleteBankAccount(this.toDeleteBankAccount.id);
+      } else {
+        console.log("onDeleteBankAccount - L'id del bank account è undefined");
+      }
+    } else {
+      console.log('onDeleteBankAccount - Il bank account è undefined');
+    }
+    this.isConfirmDialogOpen = false;
+  }
+
+  onCancelDelete(): void {
+    this.isConfirmDialogOpen = false;
   }
 
   /**
@@ -80,10 +106,24 @@ export class BankAccountsComponent {
   saveBankAccount(bankAccount: string): void {
     this.bankAccountService.saveBankAccount(bankAccount).subscribe(response => {
       if (response.body && response.body.payload) {
-        console.log('getBankAccounts - aggiunto il bank account: ' + response.body.payload);
+        console.log('saveBankAccount - aggiunto il bank account: ' + response.body.payload);
         this.ngOnInit();
       } else {
-        console.log('getBankAccounts - errore con il body o con il payload');
+        console.log('saveBankAccount - errore con il body o con il payload');
+      }
+    },
+    error => {
+      console.error(error);
+    });
+  }
+
+  deleteBankAccount(id: number) {
+    this.bankAccountService.deleteBankAccount(id).subscribe(response => {
+      if (response.body && response.body.payload) {
+        console.log('deleteBankAccount - eliminato il bank account con id: ' + id);
+        this.ngOnInit();
+      } else {
+        console.log('deleteBankAccount - errore con il body o con il payload');
       }
     },
     error => {

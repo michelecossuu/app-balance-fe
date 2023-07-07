@@ -11,6 +11,7 @@ import { AppRoutes } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 import { BankAccountDialogComponent } from './bank_accounts/bank-account-dialog/bank-account-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { ConfirmDialogComponent } from './common_components/confirm_dialog/confirm_dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     BankAccountsComponent,
     BankAccountComponent,
-    BankAccountDialogComponent
+    BankAccountDialogComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,

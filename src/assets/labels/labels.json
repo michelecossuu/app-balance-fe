@@ -11,13 +11,17 @@
       "title": "BANK ACCOUNTS",
       "total": "Total:",
       "addBankAccount": "+",
+      "deleteBankAccount": "-",
       "dialog" : {
         "title": "Add new Bank Account",
         "name": "Name:",
-        "confirm": "Confirm",
-        "cancel": "Cancel",
         "invalid_input": "Invalid input"
       }
+    },
+    "confirmDialog": {
+      "title": "Press Confirm button to continue",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
     }
     
   }
