@@ -14,16 +14,13 @@ $background-theme-yellow: #FDDA0D;
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 3%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Applica un'ombra */
+    border: 3px solid rgba(0, 0, 0, 0.3); /* Modifica il colore del bordo */
 }
 
 .title {
     font-size: 25pt;
     margin-bottom: 20px;
-}
-
-.input {
-    width: 370px;
-    height: 30px;
 }
 
 .buttons_container {
@@ -42,5 +39,25 @@ $background-theme-yellow: #FDDA0D;
     border-color: white;
     border-right: $background-theme-yellow;
     border-bottom: $background-theme-yellow;
+}
+
+.valid-input {
+    width: 370px;
+    height: 30px;
+    border-color: black;
+    border-width: 2px;
+}
+
+.invalid-input {
+    width: 370px;
+    height: 30px;
+    border-color: red;
+    border-width: 2px;
+}
+
+.invalid-input-message {
+    color: red;
+    font-size: small;
+    margin-bottom: 0;
 }
   

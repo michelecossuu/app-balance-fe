@@ -15,7 +15,8 @@
         "title": "Add new Bank Account",
         "name": "Name:",
         "confirm": "Confirm",
-        "cancel": "Cancel"
+        "cancel": "Cancel",
+        "invalid_input": "Invalid input"
       }
     }
     

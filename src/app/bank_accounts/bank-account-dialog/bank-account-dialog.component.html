@@ -2,7 +2,12 @@
     
     <p class="title">{{ labels.bankAccounts.dialog.title }}</p>
     <p>{{ labels.bankAccounts.dialog.name }}</p>
-    <input class="input" type="text" [(ngModel)]="newBankAccountName" (ngModelChange)="validateInput()">
+
+    <p class="invalid-input-message" *ngIf="!isInputValid">{{ labels.bankAccounts.dialog.invalid_input }}</p>
+    <input type="text" 
+        [(ngModel)]="newBankAccountName" 
+        [ngClass]="{'invalid-input': !isInputValid, 'valid-input': isInputValid}"
+        (input)="validateInput()" >
 
     <div class="buttons_container">
         <button class="button" (click)="confirm()">{{ labels.bankAccounts.dialog.confirm }}</button>

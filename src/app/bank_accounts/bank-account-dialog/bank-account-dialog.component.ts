@@ -10,7 +10,7 @@ import * as labels from '../../../assets/labels/labels.json';
 export class BankAccountDialogComponent {
   labels = labels;
   newBankAccountName: string = '';
-  isInputValid: boolean = false;
+  isInputValid: boolean = true;
 
   @Output() confirmClicked: EventEmitter<string> = new EventEmitter<string>();
   @Output() cancelClicked: EventEmitter<void> = new EventEmitter<void>();
