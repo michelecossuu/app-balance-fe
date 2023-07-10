@@ -62,8 +62,18 @@ $background-theme-red: #D2042D;
     font-size: 20pt;
 }
 
+.search_div {
+    flex: 3;
+    margin-top: 6px;
+}
+
 .delete_account {
-    flex: 70;
+    flex: 67;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
 }
 
 .add_bank_account {
@@ -98,4 +108,4 @@ $background-theme-red: #D2042D;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); /* Imposta il colore dello sfondo con un'opacità del 60% */
     z-index: 999; /* Assicurati che l'overlay sia sopra gli altri elementi */
-  }
+}

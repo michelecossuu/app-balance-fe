@@ -4,6 +4,7 @@ import * as labels from '../../assets/labels/labels.json';
 
 import { IBankAccount } from '../shared/model/bankAccount.model';
 import { BankAccountService } from '../shared/service/bankaccount.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bank-accounts',
@@ -19,6 +20,7 @@ export class BankAccountsComponent {
   totalBalance: number = 0;
 
   constructor(
+    private router: Router,
     private bankAccountService: BankAccountService
   ) {}
 
@@ -82,6 +84,20 @@ export class BankAccountsComponent {
 
   onCancelDelete(): void {
     this.isConfirmDialogOpen = false;
+  }
+
+  /**
+   * Metodo che viaggia verso il componente BankAccount per
+   * le specifiche del bank account selezionato
+   * 
+   * @param account 
+   */
+  openBankAccount(account: IBankAccount): void {
+    if(account) {
+      this.router.navigate(['/bankAccount', { accountData: JSON.stringify(account) }]);
+    } else {
+      console.log("passaDati - l'oggetto account non esiste.");
+    }
   }
 
   /**

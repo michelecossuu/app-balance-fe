@@ -38,6 +38,10 @@
                 <p class="bank_account_balance">{{ account.balance }}€</p>
             </div>
 
+            <div class="search_div">
+                <img class="icon" src="assets/icons/search.png" alt="Search Icon" (click)="openBankAccount(account)">
+            </div>
+
             <div class="delete_account">
                 <button class="delete_bank_account" (click)="openConfirmDialog(account)">{{ labels.bankAccounts.deleteBankAccount }}</button>
                 <div class="dialog-overlay" *ngIf="isConfirmDialogOpen">
